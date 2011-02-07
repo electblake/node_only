@@ -1,0 +1,3 @@
+name = "Node Only"
+description = "Designed for ajax but can be used whenever you want to only return node markup"
+core = "6.x"

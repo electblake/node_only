@@ -1,0 +1,17 @@
+<?php
+/* Implements hook_menu() */
+function node_only_menu(){
+	$items['node/%/only'] = array(
+		'page callback' => '_node_only_load',
+		'page arguments' => array(1),
+		'access callback' => TRUE,
+		'type' => MENU_CALLBACK
+	);
+	return $items;
+}
+
+function _node_only_load($node_id) {
+	print node_view(node_load($node_id));
+}
+
+?>
